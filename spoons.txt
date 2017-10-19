@@ -1,6 +1,6 @@
 Spoons
 
-Rules & Setup:
+Rules & Setup:                      // Is this section part of the code or an outline?
 Take the jokers out of the pile.
 Decide who will be the first person, the trash, and in the middle.
 You need one less spoon than the total amount of players.
@@ -10,36 +10,37 @@ The first player takes the top card from the deck and can either pass it on the 
 The next player then takes the card passed on and does the same to his hand.
 This continues until the last person, who takes the passed on card and places it into a discard pile, AKA the trash.
 If there are still spoons remaining in the middle and the deck is finished:
-   then the discard pile will be handed to the first player to be used.
+   then the discard pile will be handed to the first player to be used.       // Implement this into the "First/Trash" turn
 To obtain the first spoon, a player must have 4 of a kind in their hand.
 Once the first spoon has been taken, the remaining players may take the spoons.
 The player who doesn't have a spoon once the round is over loses.
 If a spoon is mistakenly taken:
-   then restart the round.
+   then restart the round.        // Place this somewhere in the code so you can check it, either when a spoon is taken or after a round
 
 Turn 1:
 You are in the middle.
 Recieve 4 cards. 
-If no spoons remain in the middle:
+If no spoons remain in the middle:  // Should be after the while loop not before
    You lose. 
-While no spoons have been taken from the middle:
-   If you have four cards of the same number:
+While no spoons have been taken from the middle:   // What if one is taken by someone else?
+   If you have four cards of the same number:      // Already stated on line 32
       Grab 1 spoon. 
       You win. 
    Look at the card that is passed onto you. 
-   If that card matches any one of yours:
+   If that card matches any one of yours:       // Don't need 2 lines of code to check 1 situation
       If you already have 3 cards of the same number and that card passed onto you matches those 3 cards:
          Take the card passed onto you and replace it with the card that doesn't match with any of the other cards in your hand.
          Grab 1 spoon.
          You win.
    Take the card passed onto you and pass on the card in your hand that doesn't match with any of the others.
+   // Expand on ^that, whether the card matches a card you have 2 of or 1 of, or if it doesn't match anything
 
-Turn 2:
-You are in the middle.
+Turn 2:                    // Make sure the problems in Turn 1 are fixed here
+You are in the middle.     // I'm guessing different situations (trash/first), code accordingly
 You have 4 cards in your hand.
 If no spoons remain in the middle:
    You lose. 
-While no spoons have been taken from the middle:
+While no spoons have been taken from the middle:   // First should check if the deck is empty and reshuffle the deck
    If you have four cards of the same number:
       Grab 1 spoon. 
       You win. 
@@ -51,8 +52,8 @@ While no spoons have been taken from the middle:
          You win.
    Take the card passed onto you and pass on the card in your hand that doesn't match with any of the others.
 
-Turn 3:
-You are in the middle.
+Turn 3:                    // Make sure the problems in Turn 1 & 2 are fixed here
+You are in the middle.     // I'm guessing different situations (trash/first), code accordingly
 You have 4 cards in your hand.
 If no spoons remain in the middle:
    You lose. 
